@@ -1,0 +1,700 @@
+/**
+ * Admin Analytics Page Styling with Agricultural Theme
+ */
+
+/* Agricultural Color Palette */
+:root {
+  --agri-green-dark: #2e6930; /* Deep forest/crop green */
+  --agri-green-medium: #5a9a5f; /* Medium leaf/plant green */
+  --agri-green-light: #8bc34a; /* Fresh spring growth */
+  --agri-brown-dark: #5d4037; /* Rich soil brown */
+  --agri-brown-medium: #8d6e63; /* Earthy brown */
+  --agri-brown-light: #bcaaa4; /* Light soil/clay */
+  --agri-yellow: #ffd54f; /* Harvest/wheat yellow */
+  --agri-blue: #4fc3f7; /* Clear sky/water blue */
+  --agri-beige: #f5f5dc; /* Pale straw beige */
+  --agri-cream: #fff8e1; /* Light cream/milk */
+  --agri-success: #43a047; /* Green success */
+  --agri-danger: #d32f2f; /* Barn red */
+  --agri-warning: #ffb300; /* Amber warning */
+  --agri-info: #0288d1; /* Info blue */
+
+  /* Additional earthy palette */
+  --agri-earth-dark: #3e2723; /* Dark earth */
+  --agri-moss: #33691e; /* Moss green */
+  --agri-sunlight: #ffb74d; /* Sunlight orange */
+  --agri-grain: #d7ccc8; /* Grain beige */
+  --agri-clay: #a1887f; /* Clay brown */
+}
+
+/* Analytics Page Cards */
+.admin-card {
+  background-color: var(--agri-cream);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(93, 64, 55, 0.08);
+  margin-bottom: 30px;
+  overflow: hidden;
+  border: 1px solid var(--agri-brown-light);
+}
+
+.admin-card .card-header {
+  background-color: var(--agri-green-light);
+  border-bottom: 1px solid var(--agri-green-medium);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--agri-brown-dark);
+}
+
+.admin-card .card-body {
+  padding: 20px;
+  color: var(--agri-brown-dark);
+}
+
+/* Chart Container */
+.chart-container {
+  min-height: 300px;
+  position: relative;
+  margin-bottom: 20px;
+  background-color: var(--agri-beige);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* Statistics Cards */
+.stat-card {
+  background-color: var(--agri-beige);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(93, 64, 55, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+  border-left: 4px solid var(--agri-green-medium);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--agri-cream);
+  border-left: 4px solid var(--agri-green-dark);
+}
+
+.stat-card-body h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--agri-green-dark);
+}
+
+.stat-card-body p {
+  color: var(--agri-brown-medium);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.stat-card-footer {
+  font-size: 14px;
+  color: var(--agri-brown-medium);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.stat-card-footer i {
+  margin-right: 5px;
+}
+
+/* Report Options */
+.report-option {
+  background-color: var(--agri-beige);
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--agri-yellow);
+}
+
+.report-option:hover {
+  box-shadow: 0 5px 15px rgba(93, 64, 55, 0.15);
+  background-color: var(--agri-cream);
+}
+
+.report-option h4 {
+  margin-bottom: 15px;
+  color: var(--agri-brown-dark);
+  font-size: 18px;
+}
+
+.report-option p {
+  color: var(--agri-brown-medium);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.report-option .btn-block {
+  margin-top: auto;
+  background-color: var(--agri-green-medium);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.report-option .btn-block:hover {
+  background-color: var(--agri-green-dark);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.date-filter {
+  min-width: 150px;
+  border: 1px solid var(--agri-brown-light);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.date-filter:focus {
+  border-color: var(--agri-green-medium);
+  box-shadow: 0 0 0 3px rgba(90, 154, 95, 0.2);
+}
+
+/* Success & Error Colors */
+.text-success {
+  color: var(--agri-success) !important;
+}
+
+.text-danger {
+  color: var(--agri-danger) !important;
+}
+
+/* Agricultural themed buttons */
+.btn-agri {
+  background-color: var(--agri-green-medium);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.btn-agri:hover {
+  background-color: var(--agri-green-dark);
+  box-shadow: 0 4px 8px rgba(46, 105, 48, 0.2);
+}
+
+.btn-agri-outline {
+  background-color: transparent;
+  border: 1px solid var(--agri-green-medium);
+  color: var(--agri-green-medium);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.btn-agri-outline:hover {
+  background-color: var(--agri-green-medium);
+  color: white;
+}
+
+/* Chart legend custom colors */
+.chart-legend .agri-color-1 {
+  background-color: var(--agri-green-medium);
+}
+.chart-legend .agri-color-2 {
+  background-color: var(--agri-brown-medium);
+}
+.chart-legend .agri-color-3 {
+  background-color: var(--agri-yellow);
+}
+.chart-legend .agri-color-4 {
+  background-color: var(--agri-blue);
+}
+
+/* Dashboard Tables */
+.agri-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: var(--agri-cream);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.agri-table thead {
+  background-color: var(--agri-green-medium);
+  color: white;
+}
+
+.agri-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.agri-table tbody tr {
+  border-bottom: 1px solid var(--agri-brown-light);
+}
+
+.agri-table tbody tr:nth-child(even) {
+  background-color: var(--agri-beige);
+}
+
+.agri-table tbody tr:hover {
+  background-color: rgba(90, 154, 95, 0.1);
+}
+
+.agri-table td {
+  padding: 12px 15px;
+  color: var(--agri-brown-dark);
+}
+
+/* Data Visualization Enhancements */
+.data-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: var(--agri-brown-medium);
+}
+
+.data-value {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--agri-green-dark);
+}
+
+/* Agricultural themed tabs for dashboard sections */
+.agri-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--agri-brown-light);
+  margin-bottom: 20px;
+}
+
+.agri-tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: var(--agri-brown-medium);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.agri-tab.active {
+  color: var(--agri-green-dark);
+  font-weight: 600;
+}
+
+.agri-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--agri-green-medium);
+}
+
+.agri-tab:hover {
+  color: var(--agri-green-medium);
+}
+
+/* Agricultural themed badge */
+.agri-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.agri-badge-success {
+  background-color: rgba(67, 160, 71, 0.2);
+  color: var(--agri-success);
+}
+
+.agri-badge-warning {
+  background-color: rgba(255, 179, 0, 0.2);
+  color: var(--agri-warning);
+}
+
+.agri-badge-danger {
+  background-color: rgba(211, 47, 47, 0.2);
+  color: var(--agri-danger);
+}
+
+/* Seasonality indicators for agricultural products */
+.season-indicator {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.season-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--agri-brown-light);
+}
+
+.season-dot.active {
+  background-color: var(--agri-green-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stat-card {
+    margin-bottom: 20px;
+  }
+
+  .report-option {
+    margin-bottom: 20px;
+  }
+}
+
+/* Agricultural Metric Cards */
+.agri-metric-card {
+  background-color: var(--agri-cream);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid var(--agri-green-medium);
+}
+
+.agri-metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(46, 105, 48, 0.15);
+}
+
+.agri-metric-icon {
+  font-size: 2rem;
+  color: var(--agri-green-dark);
+  margin-bottom: 10px;
+}
+
+.agri-metric-title {
+  font-size: 14px;
+  color: var(--agri-brown-medium);
+  margin-bottom: 5px;
+}
+
+.agri-metric-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--agri-brown-dark);
+  margin-bottom: 8px;
+}
+
+.agri-metric-change {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-top: auto;
+}
+
+.agri-metric-change.positive {
+  color: var(--agri-success);
+}
+
+.agri-metric-change.negative {
+  color: var(--agri-danger);
+}
+
+.agri-metric-change ion-icon {
+  margin-right: 4px;
+}
+
+/* Agricultural Progress Bar */
+.agri-progress-container {
+  width: 100%;
+  height: 12px;
+  background-color: var(--agri-brown-light);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.agri-progress-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+.agri-progress-bar.success {
+  background-color: var(--agri-success);
+}
+
+.agri-progress-bar.warning {
+  background-color: var(--agri-warning);
+}
+
+.agri-progress-bar.danger {
+  background-color: var(--agri-danger);
+}
+
+/* Crop Status Indicators */
+.crop-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.crop-status.growing {
+  background-color: rgba(79, 195, 247, 0.2);
+  color: var(--agri-info);
+}
+
+.crop-status.harvesting {
+  background-color: rgba(255, 213, 79, 0.2);
+  color: var(--agri-warning);
+}
+
+.crop-status.harvested {
+  background-color: rgba(67, 160, 71, 0.2);
+  color: var(--agri-success);
+}
+
+.crop-status.planting {
+  background-color: rgba(141, 110, 99, 0.2);
+  color: var(--agri-brown-medium);
+}
+
+/* Weather Indicator for Agriculture Analytics */
+.weather-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: var(--agri-beige);
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.weather-icon {
+  font-size: 1.8rem;
+  color: var(--agri-blue);
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-temp {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--agri-brown-dark);
+}
+
+.weather-desc {
+  font-size: 14px;
+  color: var(--agri-brown-medium);
+}
+
+/* Soil Type Indicators */
+.soil-type-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.soil-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.soil-type-loam {
+  background-color: var(--agri-brown-medium);
+}
+.soil-type-clay {
+  background-color: var(--agri-clay);
+}
+.soil-type-sandy {
+  background-color: var(--agri-grain);
+}
+.soil-type-silt {
+  background-color: var(--agri-brown-light);
+}
+.soil-type-chalky {
+  background-color: #e0e0e0;
+}
+.soil-type-peat {
+  background-color: var(--agri-brown-dark);
+}
+
+.soil-type-name {
+  font-size: 14px;
+  color: var(--agri-brown-dark);
+  font-weight: 500;
+}
+
+/* Agricultural Market Prices */
+.market-price-card {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--agri-cream);
+  border-left: 4px solid var(--agri-yellow);
+  margin-bottom: 15px;
+}
+
+.market-price-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.market-price-name {
+  font-weight: 600;
+  color: var(--agri-brown-dark);
+}
+
+.market-price-value {
+  font-weight: 700;
+  color: var(--agri-green-dark);
+}
+
+.market-price-change {
+  font-size: 12px;
+}
+
+.market-price-change.up {
+  color: var(--agri-success);
+}
+
+.market-price-change.down {
+  color: var(--agri-danger);
+}
+
+/* Enhanced Responsive Design for Agricultural Dashboard */
+@media (max-width: 991px) {
+  .agri-tabs {
+    flex-wrap: wrap;
+  }
+
+  .agri-tab {
+    padding: 10px 15px;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .season-indicator {
+    justify-content: center;
+  }
+
+  .agri-metric-card {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-card-body h2 {
+    font-size: 22px;
+  }
+
+  .agri-table {
+    font-size: 14px;
+  }
+
+  .agri-table th,
+  .agri-table td {
+    padding: 8px 10px;
+  }
+
+  .admin-card .card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .weather-indicator {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Print Styles for Agricultural Analytics Reports */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .admin-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    break-inside: avoid;
+    margin-bottom: 15px;
+  }
+
+  .admin-card .card-header {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  .stat-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    border-left: 4px solid #5a9a5f !important;
+    background-color: white !important;
+  }
+
+  .stat-card-body h2 {
+    color: #2e6930 !important;
+  }
+
+  .chart-container {
+    border: 1px dashed #ddd !important;
+    background-color: white !important;
+  }
+
+  .agri-table th {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+  }
+
+  .agri-table td,
+  .agri-table th {
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  /* Hide elements unnecessary for print */
+  .agri-tabs,
+  .admin-btn,
+  .btn-agri,
+  .btn-agri-outline {
+    display: none !important;
+  }
+
+  /* Add a footer with page numbers */
+  @page {
+    margin: 1cm;
+    @bottom-center {
+      content: "Page " counter(page) " of " counter(pages);
+      font-family: "Open Sans", sans-serif;
+      font-size: 10pt;
+    }
+  }
+
+  /* Add header with date */
+  @page {
+    @top-center {
+      content: "Agricultural Analytics Report - Generated on "
+        attr(data-print-date);
+      font-family: "Open Sans", sans-serif;
+      font-size: 10pt;
+    }
+  }
+}

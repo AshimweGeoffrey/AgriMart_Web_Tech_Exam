@@ -1,9 +1,11 @@
+id:26466
 Deployment: http://64.225.16.23/
 Admin : username : admin paswword:1234
 TestUser : UserName : test paswword:1234
 # E-Commerce Application
 
-A modern, full-featured e-commerce platform built with Spring Boot and Thymelea### Application Structure
+A modern, full-featured e-commerce platform built with Spring Boot and Thymelea
+### Application Structure
 
 #### Key Directories
 
@@ -292,13 +294,6 @@ The following files contain hardcoded data that should be moved to the database 
 ### Code Style
 
 This project follows standard Java code style conventions.
-
-## Documentation
-
-Additional documentation:
-
-- [Hardcoded Data Remediation](./hardcoded-data-remediation.md) - Details on the refactoring to remove hardcoded values
-- [Security Changes](./security-changes-README.md) - Information about security-related changes
 
 ## License
 

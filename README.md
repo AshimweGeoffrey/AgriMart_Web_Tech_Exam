@@ -1,3 +1,6 @@
+Deployment: http://64.225.16.23/
+Admin : username : admin paswword:1234
+TestUser : UserName : test paswword:1234
 # E-Commerce Application
 
 A modern, full-featured e-commerce platform built with Spring Boot and Thymelea### Application Structure
